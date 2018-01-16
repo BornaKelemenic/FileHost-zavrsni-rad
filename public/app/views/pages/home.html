@@ -1,0 +1,29 @@
+<div class="row text-center">
+    <div class="container">
+        <h2 class="section-heading">Home</h2>
+        <h3 class="section-subheading text-muted">Hello <strong>{{ main.username || "Anonymous" }}, </strong> Welcome to
+            File Host</h3>
+    </div>
+</div>
+
+<br><br>
+
+<div class="row text-center">
+
+    <!-- TO be changed with own seperate controller and services -->
+    <form class="" ref="uploadForm"
+          id="uploadForm"
+          action="http://localhost:8080/upload/"
+          method="post"
+          encType="multipart/form-data">
+        <div class="form-group">
+            <label for="sampleFile">Choose a file to upload</label>
+            <br>
+            <input id="sampleFile" style="display: inline-block" class="btn btn-primary" type="file" name="sampleFile"/>
+        </div>
+        <input type="text" name="username" hidden value="{{main.username || 'Anonymous'}}">
+        <div class="form-group">
+            <input style="font-size: 2em; padding: 0.5em 2em;" class="btn btn-success" type="submit" value="Upload!"/>
+        </div>
+    </form>
+</div>

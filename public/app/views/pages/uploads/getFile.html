@@ -1,0 +1,30 @@
+<div class="row text-center">
+    <div class="container">
+        <h2 class="section-heading">Download the file</h2>
+        <h3 class="section-subheading text-muted">This page allows you to download your file.</h3>
+    </div>
+</div>
+
+<div class="panel panel-info">
+
+    <!-- Default panel contents -->
+    <div class="panel-heading" style="text-align: center;"><strong>File details</strong></div>
+
+    <!-- Table -->
+    <table class="table">
+        <tr>
+            <td><strong>Filename</strong></td>
+            <td><strong>Date of upload</strong></td>
+            <td><strong>Uploaded by</strong></td>
+            <td><strong>Download</strong></td>
+        </tr>
+        <tr>
+            <td>{{ file.trazeniFile.name }}</td>
+            <td>{{ file.trazeniFile.createdAt | date:'dd.MM.yyyy' }}</td>
+            <td>{{ file.trazeniFile.username }}</td>
+            <td><a download target="_blank" href="http://localhost:8080/uploads/{{ file.trazeniFile.fileLocation + file.trazeniFile.name }}">Download</a></td>
+        </tr>
+    </table>
+
+
+</div>

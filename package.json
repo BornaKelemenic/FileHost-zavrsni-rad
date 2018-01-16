@@ -1,0 +1,25 @@
+{
+  "name": "file_sharing_site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Borna Kelemenić",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.15.2",
+    "chance": "^1.0.4",
+    "express": "^4.14.0",
+    "express-fileupload": "0.0.6",
+    "express-session": "^1.14.2",
+    "jsonwebtoken": "^7.1.9",
+    "mongoose": "^4.6.0",
+    "mongoose-title-case": "0.0.4",
+    "mongoose-validator": "^1.2.5",
+    "morgan": "^1.7.0"
+  }
+}

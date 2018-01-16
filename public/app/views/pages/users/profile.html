@@ -1,0 +1,45 @@
+<div class="row text-center">
+    <div class="container">
+        <h2 class="section-heading">Profile</h2>
+        <h3 class="section-subheading text-muted">This page allows you to view your user profile.</h3>
+    </div>
+</div>
+
+<div class="panel panel-info">
+
+    <!-- Default panel contents -->
+    <div class="panel-heading" style="text-align: center;"><strong>User Profile</strong></div>
+
+    <!-- Table -->
+    <table class="table">
+        <tr>
+            <td><strong>Username</strong></td>
+            <td><strong>Email Address</strong></td>
+            <td><strong>Password</strong></td>
+        </tr>
+        <tr>
+            <td>{{ main.username }}</td>
+            <td>{{ main.useremail }}</td>
+            <td>****************</td>
+        </tr>
+    </table>
+</div>
+
+<div class="panel panel-info">
+
+    <!-- Default panel contents -->
+    <div class="panel-heading" style="text-align: center;"><strong>User Files</strong></div>
+
+    <table class="table" ng-init="main.getFiles()">
+        <tr>
+            <td><strong>Filename</strong></td>
+            <td><strong>Date of Upload</strong></td>
+            <td><strong>Download</strong></td>
+        </tr>
+        <tr ng-repeat="file in main.files">
+            <td>{{ file.name }}</td>
+            <td>{{ file.createdAt | date:'dd.MM.yyyy' }}</td>
+            <td><a download target="_blank" href="http://localhost:8080/uploads/{{ file.fileLocation + file.name }}">Download</a></td>
+        </tr>
+    </table>
+</div>
